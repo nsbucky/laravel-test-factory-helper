@@ -336,7 +336,7 @@ class GenerateCommand extends Command
             'smallint' => '$faker->randomNumber()',
             'decimal' => '$faker->randomFloat()',
             'float' => '$faker->randomFloat()',
-            'boolean' => '$faker->boolean'
+            'boolean' => '$faker->boolean',
         ];
 
         $fakeableNames = [
@@ -365,6 +365,12 @@ class GenerateCommand extends Command
             'remember_token' => 'str_random(10)',
             'uuid' => '$faker->uuid',
             'guid' => '$faker->uuid',
+            'timezone'=>'$faker->timezone',
+            'phone_alt'=>'$faker->phoneNumber',
+            'remote_addr'=>'$faker->ipv4',
+            'ip_address'=>'$faker->ipv4',
+            'address'=>'$faker->streetAddress',
+            'address2'=>'$faker->streetAddress',
         ];
 
         if (isset($fakeableNames[$name])) {
